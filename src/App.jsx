@@ -11,7 +11,7 @@ const App = () => {
         position={[1.5, 1.5, 15]}
         fov={45}
         near={1}
-        far={50}
+        far={160}
       />
       <Universe />
     </Canvas>
