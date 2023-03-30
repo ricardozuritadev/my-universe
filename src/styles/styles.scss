@@ -1,2 +1,17 @@
+// Fonts
+@font-face {
+  font-family: 'Space';
+  src: url('/fonts/space.ttf');
+}
+
+// Variables
+@import '../styles/variables/variables';
+
+// Animations
+@import '../styles/animations/animations';
+
 // General styles
 @import '../styles/base/base';
+
+// Pages
+@import '../styles/pages/welcome-page';
