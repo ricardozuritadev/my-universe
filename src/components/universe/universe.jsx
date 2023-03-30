@@ -1,4 +1,4 @@
-import { OrbitControls, Stars, Html } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 
 import CameraRig from '../camera-rig/camera-rig';
 import SolarSystem from '../solar-system/solar-system.component';
