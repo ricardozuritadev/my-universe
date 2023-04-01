@@ -11,10 +11,10 @@ const Universe = () => {
       <CameraRig />
 
       <ambientLight intensity={0.5} />
-      <directionalLight position={[-2, 0, 3]} intensity={1.5} />
+      <directionalLight position={[1, 5, 10]} intensity={1} />
 
       <Stars
-        radius={50}
+        radius={15}
         depth={20}
         count={5000}
         factor={4}
