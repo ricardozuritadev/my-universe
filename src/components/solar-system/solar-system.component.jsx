@@ -1,30 +1,17 @@
+import Sun from '../sun/sun';
+import SkillsPlanet from '../planets/skills-planet';
+import ExperiencePLanet from '../planets/experience-planet';
+import StudiesPlanet from '../planets/studies-planet';
+import AboutPlanet from '../planets/about-planet';
+
 const SolarSystem = () => {
   return (
     <group position-y={1} rotation={[0.4, 0, 0.2]}>
-      <mesh>
-        <boxGeometry />
-        <meshStandardMaterial />
-      </mesh>
-
-      <mesh position={[0, 0, 6]}>
-        <sphereGeometry />
-        <meshStandardMaterial color="yellowgreen" />
-      </mesh>
-
-      <mesh position={[8, 0, 0]}>
-        <sphereGeometry />
-        <meshStandardMaterial color="mediumpurple" />
-      </mesh>
-
-      <mesh position={[-7, 0, 0]}>
-        <sphereGeometry />
-        <meshStandardMaterial color="mediumpurple" />
-      </mesh>
-
-      <mesh position={[0, 0, -9]}>
-        <sphereGeometry />
-        <meshStandardMaterial color="mediumpurple" />
-      </mesh>
+      <Sun />
+      <SkillsPlanet />
+      <ExperiencePLanet />
+      <StudiesPlanet />
+      <AboutPlanet />
     </group>
   );
 };
