@@ -1,6 +1,18 @@
+import { useControls } from 'leva';
+
 const ExperiencePLanet = () => {
+  const { position } = useControls('Experience planet', {
+    position: {
+      value: {
+        x: 7.5,
+        y: 0,
+        z: 0,
+      },
+    },
+  });
+
   return (
-    <mesh position={[8, 0, 0]}>
+    <mesh position={[position.x, position.y, position.z]}>
       <sphereGeometry />
       <meshStandardMaterial color="mediumpurple" />
     </mesh>
