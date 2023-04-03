@@ -40,9 +40,9 @@ const Universe = () => {
       <directionalLight position={[1, 5, 10]} intensity={1} />
 
       <Stars
-        radius={15}
+        radius={50}
         depth={20}
-        count={5000}
+        count={3500}
         factor={4}
         saturation={0}
         fade
