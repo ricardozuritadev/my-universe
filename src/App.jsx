@@ -16,8 +16,6 @@ const App = () => {
     },
   });
 
-  console.log('=> perfPanel: ', perfPanel);
-
   return (
     <>
       <Leva collapsed />
@@ -26,7 +24,7 @@ const App = () => {
         {perfPanel && <Perf position="top-left" />}
         <PerspectiveCamera
           makeDefault
-          position={[1.5, 1.5, 15]}
+          position={[-1, -1, 15]}
           fov={45}
           near={1}
           far={85}
