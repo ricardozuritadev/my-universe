@@ -12,8 +12,8 @@ const SolarSystem = () => {
       name: 'Position Y',
       value: {
         x: 0,
-        y: 1.2,
-        z: 0,
+        y: 2,
+        z: -10,
       },
     },
     rotation: {
