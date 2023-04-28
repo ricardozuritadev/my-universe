@@ -1,21 +1,25 @@
 import { useControls } from 'leva';
+import { useGLTF } from '@react-three/drei';
 
 const SkillsPlanet = () => {
+  const planet = useGLTF('/models/planets/test-planet-3.glb');
+
   const { position } = useControls('Skills planet', {
     position: {
       value: {
         x: 0,
         y: 0,
-        z: 6,
+        z: 10,
       },
     },
   });
 
   return (
-    <mesh position={[position.x, position.y, position.z]}>
-      <sphereGeometry />
-      <meshStandardMaterial color="yellowgreen" />
-    </mesh>
+    <primitive
+      object={planet.scene}
+      position={[position.x, position.y, position.z]}
+      scale={0.55}
+    />
   );
 };
 

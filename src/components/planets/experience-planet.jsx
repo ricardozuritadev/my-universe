@@ -1,10 +1,13 @@
 import { useControls } from 'leva';
+import { useGLTF } from '@react-three/drei';
 
 const ExperiencePLanet = () => {
+  const planet = useGLTF('/models/planets/test-planet-2.glb');
+
   const { position } = useControls('Experience planet', {
     position: {
       value: {
-        x: 7.5,
+        x: 11.5,
         y: 0,
         z: 0,
       },
@@ -12,10 +15,11 @@ const ExperiencePLanet = () => {
   });
 
   return (
-    <mesh position={[position.x, position.y, position.z]}>
-      <sphereGeometry />
-      <meshStandardMaterial color="mediumpurple" />
-    </mesh>
+    <primitive
+      object={planet.scene}
+      position={[position.x, position.y, position.z]}
+      scale={0.6}
+    />
   );
 };
 
