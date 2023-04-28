@@ -1,6 +1,6 @@
 const Sun = () => {
   return (
-    <mesh scale={1.5}>
+    <mesh scale={2.2}>
       <sphereGeometry />
       <meshStandardMaterial color={'orange'} />
     </mesh>
