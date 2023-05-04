@@ -23,4 +23,6 @@ const ExperiencePLanet = () => {
   );
 };
 
+useGLTF.preload('/models/planets/test-planet-2.glb');
+
 export default ExperiencePLanet;

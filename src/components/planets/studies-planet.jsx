@@ -2,7 +2,7 @@ import { useControls } from 'leva';
 import { useGLTF } from '@react-three/drei';
 
 const StudiesPlanet = () => {
-  const planet = useGLTF('/models/planets/test-planet-4.glb');
+  const planet = useGLTF('/models/planets/studies-planet.glb');
 
   const { position } = useControls('Studies planet', {
     position: {
@@ -18,9 +18,11 @@ const StudiesPlanet = () => {
     <primitive
       object={planet.scene}
       position={[position.x, position.y, position.z]}
-      scale={0.55}
+      scale={0.6}
     />
   );
 };
+
+useGLTF.preload('/models/planets/studies-planet.glb');
 
 export default StudiesPlanet;

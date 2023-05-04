@@ -23,4 +23,6 @@ const AboutPlanet = () => {
   );
 };
 
+useGLTF.preload('/models/planets/test-planet-1.glb');
+
 export default AboutPlanet;

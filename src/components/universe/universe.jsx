@@ -48,7 +48,6 @@ const Universe = () => {
         fade
         speed={0}
       />
-
       <SolarSystem />
     </>
   );

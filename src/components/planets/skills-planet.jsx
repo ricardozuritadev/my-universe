@@ -23,4 +23,6 @@ const SkillsPlanet = () => {
   );
 };
 
+useGLTF.preload('/models/planets/test-planet-3.glb');
+
 export default SkillsPlanet;
