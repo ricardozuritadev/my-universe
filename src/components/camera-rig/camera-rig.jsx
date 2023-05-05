@@ -1,14 +1,14 @@
 import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
 
-const CameraRig = () => {
+const CameraRig = ({ xValues, yValues, zValue }) => {
   useFrame((state, delta) => {
     easing.damp3(
       state.camera.position,
       [
-        -1 + (state.pointer.x * state.viewport.width) / 10,
-        -1 + state.pointer.y * 5,
-        15,
+        xValues[0] + (state.pointer.x * state.viewport.width) / xValues[1],
+        yValues[0] + state.pointer.y * yValues[1],
+        zValue,
       ],
       0.5,
       delta
