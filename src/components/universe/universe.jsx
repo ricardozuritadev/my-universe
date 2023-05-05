@@ -7,6 +7,7 @@ import {
   PRODUCTION_CAMERA,
   DEBUG_CAMERA,
 } from '../../constants/universe.constants';
+import { universeCameraPosition } from '../../utils/camera-rig/camera-rig-utils';
 
 import CameraRig from '../camera-rig/camera-rig';
 import SolarSystem from '../solar-system/solar-system.component';
@@ -34,7 +35,7 @@ const Universe = () => {
   return (
     <>
       {isDebugCamera && <OrbitControls />}
-      {isProductionCamera && <CameraRig />}
+      {isProductionCamera && <CameraRig {...universeCameraPosition} />}
 
       <ambientLight intensity={0.5} />
       <directionalLight position={[1, 5, 10]} intensity={1} />
