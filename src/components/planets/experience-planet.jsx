@@ -2,7 +2,7 @@ import { useControls } from 'leva';
 import { useGLTF } from '@react-three/drei';
 
 const ExperiencePLanet = () => {
-  const planet = useGLTF('/models/planets/test-planet-2.glb');
+  const planet = useGLTF('/models/planets/experience-planet.glb');
 
   const { position } = useControls('Experience planet', {
     position: {
@@ -23,6 +23,6 @@ const ExperiencePLanet = () => {
   );
 };
 
-useGLTF.preload('/models/planets/test-planet-2.glb');
+useGLTF.preload('/models/planets/experience-planet.glb');
 
 export default ExperiencePLanet;
