@@ -1,8 +1,8 @@
 import { useControls } from 'leva';
 import { useGLTF } from '@react-three/drei';
 
-const StudiesPlanet = () => {
-  const planet = useGLTF('/models/planets/studies-planet.glb');
+const EducationPlanet = () => {
+  const planet = useGLTF('/models/planets/education-planet.glb');
 
   const { position } = useControls('Studies planet', {
     position: {
@@ -23,6 +23,6 @@ const StudiesPlanet = () => {
   );
 };
 
-useGLTF.preload('/models/planets/studies-planet.glb');
+useGLTF.preload('/models/planets/education-planet.glb');
 
-export default StudiesPlanet;
+export default EducationPlanet;
