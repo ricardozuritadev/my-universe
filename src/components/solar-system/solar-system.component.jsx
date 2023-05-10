@@ -3,15 +3,15 @@ import { useControls } from 'leva';
 import Sun from '../sun/sun';
 import SkillsPlanet from '../planets/skills-planet';
 import ExperiencePLanet from '../planets/experience-planet';
-import StudiesPlanet from '../planets/studies-planet';
-import AboutPlanet from '../planets/about-planet';
+import EducationPlanet from '../planets/education-planet';
+import ProjectsPlanet from '../planets/projects-planet';
 
 const SolarSystem = () => {
   const { position, rotation } = useControls('Solar system', {
     position: {
       name: 'Position Y',
       value: {
-        x: 0,
+        x: 0.5,
         y: 1.5,
         z: -8,
       },
@@ -34,8 +34,8 @@ const SolarSystem = () => {
       <Sun />
       <SkillsPlanet />
       <ExperiencePLanet />
-      <StudiesPlanet />
-      <AboutPlanet />
+      <EducationPlanet />
+      <ProjectsPlanet />
     </group>
   );
 };
