@@ -20,7 +20,7 @@ const App = () => {
     <>
       <Leva collapsed />
       <WelcomePage />
-      <Canvas>
+      <Canvas flat>
         {perfPanel && <Perf position="top-left" />}
         <PerspectiveCamera
           makeDefault
