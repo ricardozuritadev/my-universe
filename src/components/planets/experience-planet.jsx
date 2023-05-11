@@ -1,8 +1,12 @@
 import { useControls } from 'leva';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, useTexture } from '@react-three/drei';
 
 const ExperiencePLanet = () => {
-  const planet = useGLTF('/models/planets/experience-planet.glb');
+  const { nodes } = useGLTF('./models/planets/experience-planet.glb');
+  const planetTexture = useTexture(
+    './models/planets/experience-planet-texture.jpg'
+  );
+  planetTexture.flipY = false;
 
   const { position } = useControls('Experience planet', {
     position: {
@@ -15,11 +19,36 @@ const ExperiencePLanet = () => {
   });
 
   return (
-    <primitive
-      object={planet.scene}
-      position={[position.x, position.y, position.z]}
-      scale={0.6}
-    />
+    <>
+      <mesh
+        geometry={nodes.Icosphere001.geometry}
+        position={[position.x, position.y, position.z]}
+        scale={0.6}
+      >
+        <meshBasicMaterial map={planetTexture} />
+      </mesh>
+      <mesh
+        geometry={nodes.Icosphere002.geometry}
+        position={[position.x, position.y, position.z]}
+        scale={0.6}
+      >
+        <meshBasicMaterial map={planetTexture} />
+      </mesh>
+      <mesh
+        geometry={nodes.Icosphere003.geometry}
+        position={[position.x, position.y, position.z]}
+        scale={0.6}
+      >
+        <meshBasicMaterial map={planetTexture} />
+      </mesh>
+    </>
+    // <primitive
+    //   object={planet.scene}
+    //   position={[position.x, position.y, position.z]}
+    //   scale={0.6}
+    // >
+    //   <meshBasicMaterial map={planetTexture} />
+    // </primitive>
   );
 };
 
